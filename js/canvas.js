@@ -52,9 +52,6 @@ function update(delta)
 function draw()
 {
   ctx.clearRect(0, 0, c.width, c.height);
-  ctx.lineWidth = "1";
-  ctx.strokeStyle = "black";
-
   for (var particle of particleList) {
     drawParticle(particle);
   }
@@ -62,29 +59,31 @@ function draw()
 
 function drawParticle(p)
 {
-  // Lights
-  var grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, 32);
-  grd.addColorStop(0, `rgba(255, 0, 0, ${p.alpha*.2})`);
-  grd.addColorStop(1, "transparent");
-  ctx.fillStyle = grd;
-  ctx.beginPath();
-  ctx.arc(p.x, p.y, 64, 0, 2 * Math.PI);
-  ctx.fill();
-
+  var x = p.x;
+  var y = p.y;
 
   /*
   // Mouse parallax
-  var x = (p.x - (8*(mouse.x-c.width/2)/(p.z+64)))%c.width;
-  var y = p.y + 8*(c.height-mouse.y)/(p.z+64);
+  x = (p.x - (8*(mouse.x-c.width/2)/(p.z+64)))%c.width;
+  y = p.y + 8*(c.height-mouse.y)/(p.z+64);
   if(x < -64)
   {
     x += c.width+128;
   }
   */
 
+  // Lights
+  var grd = ctx.createRadialGradient(x, y, 0, x, y, 32);
+  grd.addColorStop(0, `rgba(255, 0, 0, ${p.alpha*.2})`);
+  grd.addColorStop(1, "transparent");
+  ctx.fillStyle = grd;
+  ctx.beginPath();
+  ctx.arc(x, y, 64, 0, 2 * Math.PI);
+  ctx.fill();
+
   ctx.fillStyle = `rgba(255, 0, 0, ${p.alpha})`;
   ctx.beginPath();
-  ctx.translate(p.x, p.y);
+  ctx.translate(x, y);
   ctx.rotate(p.ang * Math.PI/180);
   ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
   ctx.stroke();

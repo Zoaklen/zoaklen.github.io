@@ -46,6 +46,23 @@ body
   margin-top: auto;
   margin-bottom: 32px;
   padding: 0px;
+  position: relative;
+  top: 0px;
+  transition: 0.25s;
+  z-index: 2;
+}
+
+#pimg:hover
+{
+  border-width: 1px;
+  border-color: white;
+  background-color: white;
+  box-shadow: 0 0 16px rgba(255, 0, 0, 0.5);
+
+  transition: 0.25s;
+
+  height: 384px;
+  top: 96px;
 }
 
 .name
