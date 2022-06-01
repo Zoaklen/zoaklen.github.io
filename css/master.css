@@ -1,0 +1,105 @@
+body
+{
+  font-family: consolas;
+  background-color: black;
+  color: white;
+}
+
+#pagecontainer
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#canvas
+{
+  position: absolute;
+  z-index: -1;
+}
+
+#internal
+{
+  display: flex;
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  flex-direction: column;
+}
+
+#pdata
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+#pimg
+{
+  height: 192px;
+  border: 2px solid red;
+  background-color: red;
+  border-radius: 128px;
+  margin-top: auto;
+  margin-bottom: 32px;
+  padding: 0px;
+}
+
+.name
+{
+  font-size: 2em;
+}
+
+.bar
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 32px;
+  width: 100%;
+  height: 48px;
+}
+
+.baritem
+{
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 1;
+  text-align: center;
+  margin: 8px;
+  border: 3px solid red;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.5s;
+  cursor: default;
+  background-color: rgba(1, 1, 1, .15);
+  backdrop-filter: blur(2px);
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.baritem:hover
+{
+  color: black;
+  background-color: red;
+  transition: 0.5s;
+}
+
+.baritem:active
+{
+  background-color: rgb(128, 0, 0);
+  border-color: rgb(128, 0, 0);
+  transition: 0.1s;
+}
