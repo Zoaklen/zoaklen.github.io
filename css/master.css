@@ -83,7 +83,7 @@ body
 
 #pimg:hover
 {
-  top: max(0px, 50vw - 50%);
+  top: max(0px, 50vw - 50% + 32px);
   border-width: 1px;
   border-color: white;
   background-color: white;
@@ -95,10 +95,13 @@ body
 
 #pimg:hover ~ .name
 {
-  display: none;
+  color: transparent;
+  transition: 0.5s;
 }
 
-.name{
+.name
+{
+  transition: 0.5s;
   font-size: 4em;
 }
 
@@ -151,7 +154,7 @@ body
   transition: 0.1s;
 }
 
-@media only screen and (min-width : 992px)
+@media only screen and (min-width: 992px)
 {
   #pimg
   {
