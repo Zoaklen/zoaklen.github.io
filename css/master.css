@@ -4,6 +4,11 @@
   background-color: white;
 }
 
+#pimg:hover
+{
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
+}
+
 body
 {
   background: black;
@@ -87,7 +92,6 @@ body
   border-width: 1px;
   border-color: white;
   background-color: white;
-  box-shadow: 0 0 16px rgba(255, 0, 0, 0.5);
   height: auto;
   width: 100%;
   transition: 0.25s;
@@ -161,6 +165,7 @@ body
     margin-top: auto;
     width: auto;
     height: 192px;
+    min-height: 192px;
     border-radius: 128px;
   }
 
@@ -168,6 +173,7 @@ body
   {
     width: auto;
     height: 384px;
+    min-height: 384px;
     top: 96px;
   }
 

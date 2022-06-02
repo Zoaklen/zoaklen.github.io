@@ -1,7 +1,9 @@
 var currentImg = -1;
 
 var styleData = [
-  {img: "tumblr_nl2z6atdZh1qlp4x9o1_r1_500.webp", backgroundA: "8, 0, 16", backgroundB: "0, 0, 16", border: "255, 255, 124", particle: "187, 200, 205", light: "187, 200, 205", font: "255, 255, 255"}
+  {img: "9cbb767099aaaa8e38d8581d90511988.gif", backgroundA: "11, 4, 2", backgroundB: "16, 5, 2", border: "170, 39, 30", particle: "251, 213, 90", light: "234, 182, 70", font: "255, 255, 255"},
+  {img: "b1a8e5915ce7dec05ce022b2b619df82.gif", backgroundA: "0, 0, 0", backgroundB: "17, 0, 17", border: "153, 50, 68", particle: "153, 50, 68", light: "153, 50, 68", font: "255, 255, 255"},
+  {img: "tumblr_nl2z6atdZh1qlp4x9o1_r1_500.webp", backgroundA: "0, 0, 6", backgroundB: "1, 0, 9", border: "255, 255, 124", particle: "187, 200, 205", light: "187, 200, 205", font: "255, 255, 255"},
 ];
 
 function updateStyle(style)
@@ -16,6 +18,11 @@ function updateStyle(style)
     {
       border-color: rgb(${style.border});
       background-color: rgb(${style.border});
+    }
+
+    #pimg:hover
+    {
+      box-shadow: 0 0 16px rgba(${style.border}, 0.5);
     }
 
     body
