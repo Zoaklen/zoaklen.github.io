@@ -83,6 +83,7 @@ body
 
 #pimg:hover
 {
+  top: max(0px, 50vw - 50%);
   border-width: 1px;
   border-color: white;
   background-color: white;
@@ -92,8 +93,12 @@ body
   transition: 0.25s;
 }
 
-.name
+#pimg:hover ~ .name
 {
+  display: none;
+}
+
+.name{
   font-size: 4em;
 }
 
@@ -102,17 +107,17 @@ body
   display: flex;
   flex-direction: row;
   align-self: center;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   margin-top: auto;
   width: 80%;
   flex-wrap: wrap;
   margin-bottom: auto;
+  height: 20%;
 }
 
 .baritem
 {
-  height: 150px;
   display: flex;
   flex-shrink: 0;
   flex-grow: 1;
@@ -146,7 +151,7 @@ body
   transition: 0.1s;
 }
 
-@media only screen and (min-width: 800px)
+@media only screen and (min-width : 992px)
 {
   #pimg
   {
@@ -172,6 +177,7 @@ body
   {
     flex-direction: row;
     flex-wrap: nowrap;
+    align-items: flex-end;
     max-width: 1000px;
     margin-bottom: 32px;
   }

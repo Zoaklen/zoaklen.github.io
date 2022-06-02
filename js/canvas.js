@@ -4,7 +4,7 @@ var timeSinceLastParticle = 0;
 var lastSuperParticleGhost = 0;
 
 var particleList = [];
-var superParticle = {x: 350, y: 1400, oldData: []};
+var superParticle = {x: 350, y: 2500, oldData: []};
 var miniParticleList = [];
 var mouse = {x: 0, y: 0};
 
@@ -91,7 +91,7 @@ function update(delta)
     for (var i = 0; i < 100; i++)
     {
       var ang = Math.random() * 360;
-      var spd = 100+Math.random() * 650;
+      var spd = 50+Math.random() * 250;
       var vx = spd * Math.cos(ang * Math.PI / 180);
       var vy = spd * Math.sin(ang * Math.PI / 180);
       miniParticleList.push({x: imageRectangle.x+imageRectangle.width/2, y: imageRectangle.y+imageRectangle.height/2, size: 16, vx: vx, vy: vy});
