@@ -21,6 +21,12 @@ body
   border-color: white;
 }
 
+.baritem > *
+{
+  max-height: 90%;
+  transition: inherit;
+}
+
 .baritem:hover
 {
   color: black;
@@ -31,6 +37,12 @@ body
 {
   background-color: rgb(128, 128, 128);
   border-color: rgb(128, 128, 128);
+}
+
+.baritem:hover #githubbutton
+{
+  filter: invert(100%);
+  transition: inherit;
 }
 
 body
